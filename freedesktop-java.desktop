@@ -1,10 +1,10 @@
 [Desktop Entry]
-Name=OpenJDK Java 19 Runtime
-Name[fi]=OpenJDK Java 19 - ajonaikainen ympäristö
-Comment=OpenJDK Java 19 Runtime
-Comment[fi]=OpenJDK Java 19 - ajonaikainen ympäristö
+Name=Wakefield OpenJDK Java 19 Runtime
+Name[fi]=Wakefield OpenJDK Java 19 - ajonaikainen ympäristö
+Comment=Wakefield OpenJDK Java 19 Runtime
+Comment[fi]=Wakefield OpenJDK Java 19 - ajonaikainen ympäristö
 Keywords=java;runtime
-Exec=/usr/lib/jvm/java-19-openjdk/bin/java -jar
+Exec=/usr/lib/jvm/java-19-openjdk-wakefield/bin/java -jar
 Terminal=false
 Type=Application
 Icon=java19-openjdk
