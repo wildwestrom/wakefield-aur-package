@@ -21,7 +21,7 @@ license=('custom')
 makedepends=('java-environment>=11' 'cpio' 'unzip' 'zip' 'libelf' 'libcups' 'libx11'
 	'libxrender' 'libxtst' 'libxt' 'libxext' 'libxrandr' 'alsa-lib' 'pandoc'
 	'graphviz' 'freetype2' 'libjpeg-turbo' 'giflib' 'libpng' 'lcms2'
-	'libnet' 'bash' 'harfbuzz' 'gcc-libs' 'glibc' 'wayland' 'weston>=9')
+	'libnet' 'bash' 'harfbuzz' 'gcc-libs' 'glibc' 'wayland')
 options=(!lto)
 source=(git+https://github.com/openjdk/wakefield.git#branch=pure_wl_toolkit
 	freedesktop-java.desktop
