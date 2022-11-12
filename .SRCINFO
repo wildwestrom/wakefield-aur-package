@@ -1,0 +1,116 @@
+pkgbase = java-openjdk-wakefield
+	pkgver = 19
+	pkgrel = 1
+	url = https://openjdk.org/projects/wakefield/
+	arch = x86_64
+	license = custom
+	makedepends = java-environment>=11
+	makedepends = cpio
+	makedepends = unzip
+	makedepends = zip
+	makedepends = libelf
+	makedepends = libcups
+	makedepends = libx11
+	makedepends = libxrender
+	makedepends = libxtst
+	makedepends = libxt
+	makedepends = libxext
+	makedepends = libxrandr
+	makedepends = alsa-lib
+	makedepends = pandoc
+	makedepends = graphviz
+	makedepends = freetype2
+	makedepends = libjpeg-turbo
+	makedepends = giflib
+	makedepends = libpng
+	makedepends = lcms2
+	makedepends = libnet
+	makedepends = bash
+	makedepends = harfbuzz
+	makedepends = gcc-libs
+	makedepends = glibc
+	makedepends = wayland
+	options = !lto
+	source = git+https://github.com/openjdk/wakefield.git#branch=pure_wl_toolkit
+	source = freedesktop-java.desktop
+	source = freedesktop-jconsole.desktop
+	source = freedesktop-jshell.desktop
+	sha256sums = SKIP
+	sha256sums = abf5527f32d6ef7dbc07bbeb1012d40cbba4e98ef39b0afc0bc9222d33802284
+	sha256sums = 3f11df00c5b8024b6ef5a8af8d3ff31ab1762b7ddb89f8503c068fc4fbfd7204
+	sha256sums = 810e7a532b2a43d38a58213c2542f2b835c67419e5f5561b7efd89d349825258
+
+pkgname = jre-openjdk-wakefield-headless
+	pkgdesc = Wakefield OpenJDK Java 19 headless runtime environment
+	install = install_jre-openjdk-wakefield-headless.sh
+	depends = java-runtime-common>=3
+	depends = ca-certificates-utils
+	depends = nss
+	depends = libjpeg-turbo
+	depends = libjpeg.so
+	depends = lcms2
+	depends = liblcms2.so
+	depends = libnet
+	depends = freetype2
+	depends = libfreetype.so
+	depends = harfbuzz
+	depends = libharfbuzz.so
+	depends = glibc
+	depends = gcc-libs
+	optdepends = java-rhino: for some JavaScript support
+	provides = java-runtime-headless=19
+	provides = java-runtime-headless-openjdk-wakefield=19
+	provides = jre19-openjdk-wakefield-headless=19-1
+	backup = etc/java-openjdk-wakefield/logging.properties
+	backup = etc/java-openjdk-wakefield/management/jmxremote.access
+	backup = etc/java-openjdk-wakefield/management/jmxremote.password.template
+	backup = etc/java-openjdk-wakefield/management/management.properties
+	backup = etc/java-openjdk-wakefield/net.properties
+	backup = etc/java-openjdk-wakefield/security/java.policy
+	backup = etc/java-openjdk-wakefield/security/java.security
+	backup = etc/java-openjdk-wakefield/security/policy/README.txt
+	backup = etc/java-openjdk-wakefield/security/policy/limited/default_US_export.policy
+	backup = etc/java-openjdk-wakefield/security/policy/limited/default_local.policy
+	backup = etc/java-openjdk-wakefield/security/policy/limited/exempt_local.policy
+	backup = etc/java-openjdk-wakefield/security/policy/unlimited/default_US_export.policy
+	backup = etc/java-openjdk-wakefield/security/policy/unlimited/default_local.policy
+	backup = etc/java-openjdk-wakefield/sound.properties
+
+pkgname = jre-openjdk-wakefield
+	pkgdesc = Wakefield OpenJDK Java 19 full runtime environment
+	install = install_jre-openjdk-wakefield.sh
+	depends = jre19-openjdk-wakefield-headless=19-1
+	depends = giflib
+	depends = libgif.so
+	depends = glibc
+	depends = gcc-libs
+	depends = libpng
+	optdepends = alsa-lib: for basic sound support
+	optdepends = gtk2: for the Gtk+ 2 look and feel - desktop usage
+	optdepends = gtk3: for the Gtk+ 3 look and feel - desktop usage
+	provides = java-runtime=19
+	provides = java-runtime-openjdk-wakefield=19
+	provides = jre19-openjdk-wakefield=19-1
+
+pkgname = jdk-openjdk-wakefield
+	pkgdesc = Wakefield OpenJDK Java 19 development kit
+	install = install_jdk-openjdk-wakefield.sh
+	depends = jre19-openjdk-wakefield=19-1
+	depends = java-environment-common=3
+	depends = hicolor-icon-theme
+	depends = libelf
+	depends = glibc
+	depends = gcc-libs
+	provides = java-environment=19
+	provides = java-environment-openjdk-wakefield=19
+	provides = jdk19-openjdk-wakefield=19-1
+
+pkgname = openjdk-wakefield-src
+	pkgdesc = Wakefield OpenJDK Java 19 sources
+	depends = jdk19-openjdk-wakefield=19-1
+	provides = openjdk-wakefield19-src=19-1
+
+pkgname = openjdk-wakefield-doc
+	pkgdesc = Wakefield OpenJDK Java 19 documentation
+	depends = jdk19-openjdk-wakefield=19-1
+	provides = openjdk-wakefield19-doc=19-1
